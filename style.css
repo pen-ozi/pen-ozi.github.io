@@ -23,6 +23,12 @@ main {
     text-align: center;
 }
 
+.button-container {
+    display: flex;
+    gap: 10px; /* ボタン間のスペースを設定 */
+    justify-content: center;
+}
+
 .button {
     display: inline-block;
     padding: 10px 20px;
