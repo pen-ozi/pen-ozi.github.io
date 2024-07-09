@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #000; /* 背景を黒に設定 */
+    color: #fff; /* テキストを白に設定 */
     margin: 0;
     padding: 0;
     display: flex;
@@ -14,8 +15,8 @@ header {
     margin-bottom: 20px;
 }
 
-h1 {
-    color: #333;
+h1, h2 {
+    color: #fff; /* 見出しテキストを白に設定 */
 }
 
 main {
@@ -26,14 +27,5 @@ main {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}
+    color: #000; /* ボタンテキストを黒に設定 */
+    background
