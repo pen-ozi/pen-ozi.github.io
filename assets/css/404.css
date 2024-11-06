@@ -1,0 +1,279 @@
+* {
+    margin:0px auto;
+    padding: 0px;
+  text-align:center;
+  }
+  body {
+    background-color: #D4D9ED;
+  }
+  .cont_principal {
+  position: absolute;  
+    width: 100%;
+    height: 100%;
+  overflow: hidden;
+  }
+  .cont_error {
+  position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 50%;
+    margin-top:-150px;
+  }
+  
+  .cont_error > h1  {
+   font-family: 'Lato', sans-serif;  
+  font-weight: 400;
+    font-size:150px;
+  color:#fff;
+  position: relative;
+  left:-100%;
+  transition: all 0.5s;
+  }
+  
+  
+  .cont_error > p  {
+   font-family: 'Lato', sans-serif;  
+  font-weight: 300;
+    font-size:24px;
+    letter-spacing: 5px;
+  color:#9294AE;
+  position: relative;
+  left:100%;
+  transition: all 0.5s;
+      transition-delay: 0.5s;
+  -webkit-transition: all 0.5s;
+   -webkit-transition-delay: 0.5s;
+  }
+  
+  .cont_aura_1 {
+    position:absolute;
+    width:300px;
+    height: 120%;
+  top:25px;
+  right: -340px;
+    background-color: #8A65DF;
+  box-shadow: 0px 0px  60px  20px  rgba(137,100,222,0.5);
+  -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  
+  .cont_aura_2 {
+    position:absolute;
+    width:100%;
+    height: 300px;
+  right:-10%;
+  bottom:-301px;
+   background-color: #8B65E4;
+  box-shadow: 0px 0px 60px 10px rgba(131, 95, 214, 0.5),0px 0px  20px  0px  rgba(0,0,0,0.1);
+    z-index:5;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  }
+  
+  .cont_error_active > .cont_error > h1 {
+    left:0%;
+  }
+  .cont_error_active > .cont_error > p {
+    left:0%;
+  }
+  
+  .cont_error_active > .cont_aura_2 {
+      animation-name: animation_error_2;
+      animation-duration: 4s;
+    animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+  transform: rotate(-20deg);    
+  }
+  .cont_error_active > .cont_aura_1 {
+   transform: rotate(20deg);
+    right:-170px;
+      animation-name: animation_error_1;
+      animation-duration: 4s;
+    animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+  }
+  
+  @-webkit-keyframes animation_error_1 {
+    from {
+      -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+    }
+    to {  -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+    }
+  }
+  @-o-keyframes animation_error_1 {
+    from {
+      -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+    }
+    to {  -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+    }
+  
+  }
+  @-moz-keyframes animation_error_1 {
+    from {
+      -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+    }
+    to {  -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+    }
+  
+  }
+  @keyframes animation_error_1 {
+    from {
+      -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+    }
+    to {  -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+    }
+  }
+  
+  
+  
+  
+  @-webkit-keyframes animation_error_2 {
+    from { -webkit-transform: rotate(-15deg); 
+    transform: rotate(-15deg);
+    }
+    to { -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    }
+  }
+  @-o-keyframes animation_error_2 {
+    from { -webkit-transform: rotate(-15deg); 
+    transform: rotate(-15deg);
+    }
+    to { -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    }
+  }
+  @-moz-keyframes animation_error_2 {
+    from { -webkit-transform: rotate(-15deg); 
+    transform: rotate(-15deg);
+    }
+    to { -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    }
+  }
+  @keyframes animation_error_2 {
+    from { -webkit-transform: rotate(-15deg); 
+    transform: rotate(-15deg);
+    }
+    to { -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    }
+  }
+
+/* Button */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		background-color: transparent;
+		border-radius: 4px;
+		border: 0;
+		box-shadow: inset 0 0 0 1px #ffffff;
+		color: #ffffff !important;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 0.8rem;
+		font-weight: 300;
+		height: 2.75rem;
+		letter-spacing: 0.2rem;
+		line-height: 2.75rem;
+		outline: 0;
+		padding: 0 1.25rem 0 1.35rem;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		white-space: nowrap;
+	}
+
+		input[type="submit"]:hover,
+		input[type="reset"]:hover,
+		input[type="button"]:hover,
+		button:hover,
+		.button:hover {
+			background-color: rgba(255, 255, 255, 0.075);
+		}
+
+		input[type="submit"]:active,
+		input[type="reset"]:active,
+		input[type="button"]:active,
+		button:active,
+		.button:active {
+			background-color: rgba(255, 255, 255, 0.175);
+		}
+
+		input[type="submit"].icon:before,
+		input[type="reset"].icon:before,
+		input[type="button"].icon:before,
+		button.icon:before,
+		.button.icon:before {
+			margin-right: 0.5em;
+		}
+
+		input[type="submit"].fit,
+		input[type="reset"].fit,
+		input[type="button"].fit,
+		button.fit,
+		.button.fit {
+			width: 100%;
+		}
+
+		input[type="submit"].small,
+		input[type="reset"].small,
+		input[type="button"].small,
+		button.small,
+		.button.small {
+			font-size: 0.6rem;
+			height: 2.0625rem;
+			line-height: 2.0625rem;
+		}
+
+		input[type="submit"].primary,
+		input[type="reset"].primary,
+		input[type="button"].primary,
+		button.primary,
+		.button.primary {
+			background-color: #ffffff;
+			color: #1b1f22 !important;
+			font-weight: 600;
+		}
+
+		input[type="submit"].disabled, input[type="submit"]:disabled,
+		input[type="reset"].disabled,
+		input[type="reset"]:disabled,
+		input[type="button"].disabled,
+		input[type="button"]:disabled,
+		button.disabled,
+		button:disabled,
+		.button.disabled,
+		.button:disabled {
+			pointer-events: none;
+			cursor: default;
+			opacity: 0.25;
+		}
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button {
+		line-height: calc(2.75rem - 2px);
+	}
