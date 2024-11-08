@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/404.css" />
     <title>404 - ブロック崩し</title>
     <style>
         body {
@@ -37,22 +36,12 @@
             background-color: #45a049;
         }
     </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V51P1G8XD2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-V51P1G8XD2');
-</script>
 </head>
 <body>
-    <h1>404 Error - Page not found</h1>
-    <a href="https://pen-ozi.github.io" class="button">Return to Home</a>
-    <p>Operated by arrow keys</p>
+    <h1>404エラー - ページが見つかりません</h1>
+    <p>パドルでボールを操作してブロックを壊してください！</p>
     <canvas id="gameCanvas" width="480" height="320"></canvas>
-    <button id="restartButton" onclick="restartGame()">Play Again</button>
+    <button id="restartButton" onclick="restartGame()">もう一度プレイ</button>
 
     <script>
         const canvas = document.getElementById("gameCanvas");
@@ -147,7 +136,7 @@
                             b.status = 0;
                             score++;
                             if (score === brickRowCount * brickColumnCount) {
-                                alert("Congratulations!You have broken all the blocks!");
+                                alert("おめでとう！全てのブロックを壊しました！");
                                 restartGame();
                             }
                         }
@@ -168,7 +157,7 @@
             else if (ballY + ballDY > canvas.height - ballRadius) {
                 if (ballX > paddleX && ballX < paddleX + paddleWidth) ballDY = -ballDY;
                 else {
-                    alert("Game over!");
+                    alert("ゲームオーバー！");
                     restartButton.style.display = "block";
                     return;
                 }
@@ -191,6 +180,4 @@
         draw();
     </script>
 </body>
- <!-- script-->
-    <script src="assets/js/jquery.min.js"></script>
 </html>
