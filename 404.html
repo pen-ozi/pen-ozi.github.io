@@ -38,10 +38,10 @@
     </style>
 </head>
 <body>
-    <h1>404エラー - ページが見つかりません</h1>
-    <p>パドルでボールを操作してブロックを壊してください！</p>
+    <h1>404 Error - Page not found</h1>
+    <p>Operated by arrow keys</p>
     <canvas id="gameCanvas" width="480" height="320"></canvas>
-    <button id="restartButton" onclick="restartGame()">もう一度プレイ</button>
+    <button id="restartButton" onclick="restartGame()">Play Again</button>
 
     <script>
         const canvas = document.getElementById("gameCanvas");
@@ -136,7 +136,7 @@
                             b.status = 0;
                             score++;
                             if (score === brickRowCount * brickColumnCount) {
-                                alert("おめでとう！全てのブロックを壊しました！");
+                                alert("Congratulations!You have broken all the blocks!");
                                 restartGame();
                             }
                         }
@@ -157,7 +157,7 @@
             else if (ballY + ballDY > canvas.height - ballRadius) {
                 if (ballX > paddleX && ballX < paddleX + paddleWidth) ballDY = -ballDY;
                 else {
-                    alert("ゲームオーバー！");
+                    alert("Game over!");
                     restartButton.style.display = "block";
                     return;
                 }
